@@ -8,7 +8,7 @@ body{
     align-items: center;
     height: 600px;
 }
-.main button{
+.main .btns{
     width: 300px;
     height: 300px;
     margin: 100px;
