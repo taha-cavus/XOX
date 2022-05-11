@@ -6,7 +6,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    min-height: 600px;
+    flex-direction:unset;
+    flex-wrap: wrap;
 }
 .main .btns{
     width: 300px;
@@ -16,5 +18,17 @@ body{
     font-weight: bolder;
     border: 10px solid salmon;
     background-color: chartreuse;
+    cursor: pointer;
+}
+/************************************** PLAY ****************************************/
+.playGround{
+    width: 50%;
+    height: 400px;
+    margin: 100px auto;
+}
+.xoBtns{
+    margin: 5px;
+    width: 30%;
+    height: 200px;
     cursor: pointer;
 }
