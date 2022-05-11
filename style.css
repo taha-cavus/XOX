@@ -1,0 +1,20 @@
+/********************************** MENU *****************************************/
+body{
+    background-color:rgb(22, 20, 20);
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+.main button{
+    width: 300px;
+    height: 300px;
+    margin: 100px;
+    font-size: 3rem;
+    font-weight: bolder;
+    border: 10px solid salmon;
+    background-color: chartreuse;
+    cursor: pointer;
+}
