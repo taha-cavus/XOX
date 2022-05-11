@@ -19,7 +19,7 @@ function createMenuPage() {
         play()
     })
     botbtn.addEventListener("click", () => {
-        play()
+        playBot()
     })
 
 
@@ -34,7 +34,19 @@ function createMenuPage() {
         border.appendChild(main)
         
     }
-    function play() {
+    function playVS() {
+        deleteMainSection()
+        createMainSection()
+        for (let y = 0; y < list.length; y++) {
+            for (let x = 0; x < list.length; x++) {
+                var create = document.createElement("button")
+                create.textContent = list[y][x]
+                create.classList.add("xoBtns")
+                document.querySelector(".main").appendChild(create)
+            }
+        }
+    }
+    function playBot() {
         deleteMainSection()
         createMainSection()
         for (let y = 0; y < list.length; y++) {
