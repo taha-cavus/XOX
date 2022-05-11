@@ -1,4 +1,5 @@
 var border = document.querySelector(".border")
+var count = 1;
 createMenuPage();
 
 function createMenuPage() {
@@ -15,8 +16,8 @@ function createMenuPage() {
     border.appendChild(main)
     main.appendChild(vsbtn)
     main.appendChild(botbtn)
-    vsbtn.addEventListener("click", () => {  
-        play()
+    vsbtn.addEventListener("click", () => {
+        playVS()
     })
     botbtn.addEventListener("click", () => {
         playBot()
@@ -25,14 +26,14 @@ function createMenuPage() {
 
     //clear main section
     function deleteMainSection() {
-        main.remove();
+        document.querySelector(".main").remove();
     }
     function createMainSection() {
         var main = document.createElement("div")
         main.classList.add("main")
         main.classList.add("playGround")
         border.appendChild(main)
-        
+
     }
     function playVS() {
         deleteMainSection()
@@ -42,9 +43,24 @@ function createMenuPage() {
                 var create = document.createElement("button")
                 create.textContent = list[y][x]
                 create.classList.add("xoBtns")
+                create.addEventListener("click", () => {
+                    if (count % 2 == 1 && list[y][x] == "") {
+                        list[y][x] = "X"
+                        count++;
+
+                        playVS();
+                    } else if (count % 2 == 0 && list[y][x] == "") {
+                        list[y][x] = "O"
+                        count++;
+                        
+                        playVS();
+                    }
+
+                })
                 document.querySelector(".main").appendChild(create)
             }
         }
+
     }
     function playBot() {
         deleteMainSection()
@@ -62,7 +78,7 @@ function createMenuPage() {
 
 
 
-var list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+var list = [["", "", ""], ["", "", ""], ["", "", ""]]
 
 
 
