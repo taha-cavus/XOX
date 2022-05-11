@@ -23,12 +23,26 @@ body{
 /************************************** PLAY ****************************************/
 .playGround{
     width: 50%;
-    height: 400px;
+    min-height: 600px;
     margin: 100px auto;
+    border: 3px solid white;
 }
 .xoBtns{
-    margin: 5px;
-    width: 30%;
+    
+    width: 33%;
     height: 200px;
     cursor: pointer;
+    color: white;
+    background-color: grey;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.player1{
+    background-color: green;
+}
+.player2{
+    background-color: red;
+}
+.win{
+    background-color: yellow;
 }

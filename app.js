@@ -35,7 +35,6 @@ function createMenuPage() {
         
     }
     function play() {
-        debugger
         deleteMainSection()
         createMainSection()
         for (let y = 0; y < list.length; y++) {
